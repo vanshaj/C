@@ -1,12 +1,12 @@
 /*
  * =====================================================================================
  *
- *       Filename:  hello.c
+ *       Filename:  func.c
  *
- *    Description: 
+ *    Description:  
  *
  *        Version:  1.0
- *        Created:  04/24/23 15:02:27
+ *        Created:  04/24/23 15:36:53
  *       Revision:  none
  *       Compiler:  gcc
  *
@@ -15,21 +15,21 @@
  *
  * =====================================================================================
  */
+// Declaration of stdio.h must be before stdlib.h
 #include <stdio.h>
+#include <stdlib.h>
+
+int larger(int x, int y){
+	if (x>y){
+		return x;
+	} 
+	return y;
+}
 
 int main(){
-	puts("C Rocks");
-	int card_count = 10;
-	if (card_count > 10) {
-		puts("count is greater than 10");
-	}
-	else {
-		puts("count is less than or equal to 10");
-	}
-	int count = 0;
-	while (count <10){
-		puts("Count is increasing");
-		count = count + 1;
-	}
+	int max;
+	max = larger(100, 101);
+	printf("max value is %d\n ", max);
 	return 0;
 }
+
