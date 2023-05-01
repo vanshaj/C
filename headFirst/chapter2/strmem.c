@@ -8,6 +8,7 @@ void printStr(char msg[]){
 	printf("the char value at second is %c\n", *second);
 	printf("the char value at third is %c\n", *(first + 2));
 	printf("the char value at fourth is %c\n", msg[3]);
+	// *(msg +1) msg[1] [1]msg
 	printf("the string from first to end is '%s'\n", first);
 	printf("the string from second to end is '%s'\n", second);
 	char currentVal = *msg;
@@ -32,7 +33,7 @@ void printInt(int msg[], int size){
 	puts("----------int pointer memory iteration end-------------");
 }
 
-void printContent(char *msg, int offset){
+void printContent(char *msg, int offset){ // (char msg[], int offset) are equal
 	puts(msg+offset);
 }
 
