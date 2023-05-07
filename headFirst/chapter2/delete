@@ -1,0 +1,9 @@
+	char arr2[][20] = {
+	printf("%c\n",**arr2);
+	printf("%c\n", *(*arr2 + 5));
+	printf("%c\n", *(*(arr2+2)+5));
+		pointer = *(arr2+i);
+	char arr[] = "Poor"; // stack
+	puts(arr);
+	arr[0] = 'T';
+	puts(arr); // Toor
