@@ -1,20 +1,3 @@
-/*
- * =====================================================================================
- *
- *       Filename:  rewise.c
- *
- *    Description:  
- *
- *        Version:  1.0
- *        Created:  05/06/23 06:34:56
- *       Revision:  none
- *       Compiler:  gcc
- *
- *         Author:  YOUR NAME (), 
- *   Organization:  
- *
- * =====================================================================================
- */
 #include <stdlib.h>
 #include <stdio.h>
 

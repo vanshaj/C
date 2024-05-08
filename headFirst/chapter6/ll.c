@@ -1,20 +1,3 @@
-/*
- * =====================================================================================
- *
- *       Filename:  ll.c
- *
- *    Description: G 
- *
- *        Version:  1.0
- *        Created:  06/09/23 15:03:58
- *       Revision:  none
- *       Compiler:  gcc
- *
- *         Author:  YOUR NAME (), 
- *   Organization:  
- *
- * =====================================================================================
- */
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>

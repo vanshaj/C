@@ -1,20 +1,3 @@
-/*
- * =====================================================================================
- *
- *       Filename:  memory.c
- *
- *    Description:  
- *
- *        Version:  1.0
- *        Created:  04/28/23 02:54:12
- *       Revision:  none
- *       Compiler:  gcc
- *
- *         Author:  YOUR NAME (), 
- *   Organization:  
- *
- * =====================================================================================
- */
 #include <stdio.h>
 #include <stdlib.h>
 

@@ -1,20 +1,3 @@
-/*
- * =====================================================================================
- *
- *       Filename:  emp.c
- *
- *    Description: G 
- *
- *        Version:  1.0
- *        Created:  06/18/23 06:57:31
- *       Revision:  none
- *       Compiler:  gcc
- *
- *         Author:  YOUR NAME (), 
- *   Organization:  
- *
- * =====================================================================================
- */
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>

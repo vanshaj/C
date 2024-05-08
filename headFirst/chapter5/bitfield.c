@@ -1,20 +1,3 @@
-/*
- * =====================================================================================
- *
- *       Filename:  bitfield.c
- *
- *    Description:  
- *
- *        Version:  1.0
- *        Created:  06/09/23 14:58:18
- *       Revision:  none
- *       Compiler:  gcc
- *
- *         Author:  YOUR NAME (), 
- *   Organization:  
- *
- * =====================================================================================
- */
 #include <stdlib.h>
 
 typedef struct bitfield{

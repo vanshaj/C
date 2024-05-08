@@ -1,20 +1,3 @@
-/*
- * =====================================================================================
- *
- *       Filename:  fpoint.c
- *
- *    Description:  
- *
- *        Version:  1.0
- *        Created:  06/18/23 06:48:44
- *       Revision:  none
- *       Compiler:  gcc
- *
- *         Author:  YOUR NAME (), 
- *   Organization:  
- *
- * =====================================================================================
- */
 #include <stdlib.h>
 #include <stdio.h>
 

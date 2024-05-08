@@ -1,20 +1,3 @@
-/*
- * =====================================================================================
- *
- *       Filename:  reverse.c
- *
- *    Description:  
- *
- *        Version:  1.0
- *        Created:  05/07/23 10:57:39
- *       Revision:  none
- *       Compiler:  gcc
- *
- *         Author:  YOUR NAME (), 
- *   Organization:  
- *
- * =====================================================================================
- */
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>

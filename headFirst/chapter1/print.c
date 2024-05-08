@@ -1,20 +1,3 @@
-/*
- * =====================================================================================
- *
- *       Filename:  print.c
- *
- *    Description: jGk 
- *
- *        Version:  1.0
- *        Created:  04/24/23 15:15:57
- *       Revision:  none
- *       Compiler:  gcc
- *
- *         Author:  YOUR NAME (), 
- *   Organization:  
- *
- * =====================================================================================
- */
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdbool.h>

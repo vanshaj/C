@@ -1,20 +1,3 @@
-/*
- * =====================================================================================
- *
- *       Filename:  structs.c
- *
- *    Description: Ggg 
- *
- *        Version:  1.0
- *        Created:  06/03/23 10:08:52
- *       Revision:  none
- *       Compiler:  gcc
- *
- *         Author:  YOUR NAME (), 
- *   Organization:  
- *
- * =====================================================================================
- */
 #include <stdlib.h>
 #include <stdio.h>
 

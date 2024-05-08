@@ -1,21 +1,3 @@
-/*
- * =====================================================================================
- *
- *       Filename:  func.c
- *
- *    Description:  
- *
- *        Version:  1.0
- *        Created:  04/24/23 15:36:53
- *       Revision:  none
- *       Compiler:  gcc
- *
- *         Author:  YOUR NAME (), 
- *   Organization:  
- *
- * =====================================================================================
- */
-// Declaration of stdio.h must be before stdlib.h
 #include <stdio.h>
 #include <stdlib.h>
 
