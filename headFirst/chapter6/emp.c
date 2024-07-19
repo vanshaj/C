@@ -40,6 +40,8 @@ int main(){
 	l2.next = l3;
 	linkedlist *l4 = createP(4);
 	l3->next = l4;
+  linkedlist *l5 = createP(5);
+  l4->next = l5;
 	display(&l1);
 	destroy(l3);
 	destroy(l4);

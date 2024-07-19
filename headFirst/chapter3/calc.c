@@ -1,20 +1,3 @@
-/*
- * =====================================================================================
- *
- *       Filename:  calc.c
- *
- *    Description: G 
- *
- *        Version:  1.0
- *        Created:  05/13/23 03:08:45
- *       Revision:  none
- *       Compiler:  gcc
- *
- *         Author:  YOUR NAME (), 
- *   Organization:  
- *
- * =====================================================================================
- */
 #include <stdlib.h>
 #include <stdio.h>
 

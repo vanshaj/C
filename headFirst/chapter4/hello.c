@@ -1,20 +1,3 @@
-/*
- * =====================================================================================
- *
- *       Filename:  hello.c
- *
- *    Description:  
- *
- *        Version:  1.0
- *        Created:  05/29/23 17:16:20
- *       Revision:  none
- *       Compiler:  gcc
- *
- *         Author:  YOUR NAME (), 
- *   Organization:  
- *
- * =====================================================================================
- */
 #include <stdlib.h>
 #include <stdio.h>
 #include "totaller.h"

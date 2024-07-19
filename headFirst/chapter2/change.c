@@ -1,5 +1,6 @@
 #include <stdlib.h>
 #include <stdio.h>
+
 int main(){
 	char jimmy[] = "alive";
 	char *raider = jimmy;

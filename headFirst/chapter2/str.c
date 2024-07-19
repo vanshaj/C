@@ -1,20 +1,3 @@
-/*
- * =====================================================================================
- *
- *       Filename:  str.c
- *
- *    Description:  
- *
- *        Version:  1.0
- *        Created:  05/06/23 07:01:09
- *       Revision:  none
- *       Compiler:  gcc
- *
- *         Author:  YOUR NAME (), 
- *   Organization:  
- *
- * =====================================================================================
- */
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>

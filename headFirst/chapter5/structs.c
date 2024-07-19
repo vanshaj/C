@@ -9,7 +9,7 @@ typedef struct fish{
 	int teeth;
 	int age;
 	enum colors color;
-}fish;
+} fish;
 
 void printName(fish f){
 	puts(f.name);
@@ -17,7 +17,6 @@ void printName(fish f){
 
 void increaseAge(fish *f) {
 	(*f).age = (*f).age + 1;
-	// f->age = f->age + 1;
 }
 
 void printSpecies(fish *f){
