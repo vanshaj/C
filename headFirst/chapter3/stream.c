@@ -1,21 +1,3 @@
-/*
- * =====================================================================================
- *
- *       Filename:  stream.c
- *
- *    Description: "w
- *    G 
- *
- *        Version:  1.0
- *        Created:  05/29/23 16:42:11
- *       Revision:  none
- *       Compiler:  gcc
- *
- *         Author:  YOUR NAME (), 
- *   Organization:  
- *
- * =====================================================================================
- */
 #include <stdlib.h>
 #include <stdio.h>
 #include <unistd.h>

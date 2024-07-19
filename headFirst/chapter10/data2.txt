@@ -1,0 +1,2 @@
+inside2
+hello world

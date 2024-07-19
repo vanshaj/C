@@ -1,0 +1,13 @@
+hello world
+bye
+bye
+byeworld
+
+
+bye
+bye world
+do it
+123 31232
+hello
+&& ls / && echo 
+

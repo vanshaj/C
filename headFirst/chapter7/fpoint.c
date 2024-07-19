@@ -15,6 +15,9 @@ int main() {
 	int a = 5;
 	int b = 6;
 	int c = fn_name(a,b);
+  fn_name = sum;
+  int d = fn_name(a,b);
 	printf("%d\n", c);
+	printf("%d\n", d);
 	return 0;
 }
