@@ -1,0 +1,69 @@
+Then is the data to be copied
+Copy this whole data and put it
+inside some content
+DESCRIPTION         top
+       The function fread() reads nmemb items of data, each size bytes
+       long, from the stream pointed to by stream, storing them at the
+       location given by ptr.
+
+       The function fwrite() writes nmemb items of data, each size bytes
+       long, to the stream pointed to by stream, obtaining them from the
+       location given by ptr.
+
+       For nonlocking counterparts, see unlocked_stdio(3).
+RETURN VALUE         top
+       On success, fread() and fwrite() return the number of items read
+       or written.  This number equals the number of bytes transferred
+       only when size is 1.  If an error occurs, or the end of the file
+       is reached, the return value is a short item count (or zero).
+
+       The file position indicator for the stream is advanced by the
+       number of bytes successfully read or written.
+
+       fread() does not distinguish between end-of-file and error, and
+       callers must use feof(3) and ferror(3) to determine which
+       occurred.
+ATTRIBUTES         top
+       For an explanation of the terms used in this section, see
+       attributes(7).
+       ┌─────────────────────────────────────┬───────────────┬─────────┐
+       │ Interface                           │ Attribute     │ Value   │
+       ├─────────────────────────────────────┼───────────────┼─────────┤
+       │ fread(), fwrite()                   │ Thread safety │ MT-Safe │
+       └─────────────────────────────────────┴───────────────┴─────────┘
+STANDARDS         top
+       C11, POSIX.1-2008.
+HISTORY         top
+       POSIX.1-2001, C89.
+EXAMPLES         top
+       The program below demonstrates the use of fread() by parsing
+       /bin/sh ELF executable in binary mode and printing its magic and
+       class:
+
+           $ ./a.out
+           ELF magic: 0x7f454c46
+           Class: 0x02
+
+   Program source
+
+       #include <stdio.h>
+       #include <stdlib.h>
+
+       #define ARRAY_SIZE(arr) (sizeof(arr) / sizeof((arr)[0]))
+
+       int
+       main(void)
+       {
+           FILE           *fp;
+           size_t         ret;
+           unsigned char  buffer[4];
+
+           fp = fopen("/bin/sh", "rb");
+           if (!fp) {
+               perror("fopen");
+               return EXIT_FAILURE;
+           }
+
+           ret = fread(buffer, sizeof(*buffer), ARRAY_SIZE(buffer), fp);
+           if (ret != ARRAY_SIZE(buffer)) {
+               fprintf(stderr, "fread() failed: %zu\n", ret);
