@@ -21,8 +21,13 @@ int main(int argc, char *argv[]){
     printf("Unable to open file due to %s\n", strerror(errno));
     exit(EXIT_FAILURE);
   }
-    // Then will update the location of the file to the start bytes before the END
-  // curr = lseek(fd, -10, SEEK_END);
+  /**
+  * Then will update the location of the file to the start bytes before the END
+  * lseek third parameter whence has 3 option
+  * SEEK_SET - start of the file
+  * SEEK_CUR = current loc of the seek pointer
+  * SEEK_END - end loc of the file
+  **/ curr = lseek(fd, -10, SEEK_END);
   curr = lseek(fd, 0, SEEK_SET);
   if (curr == -1) {
     printf("Unable to seek file due to %s\n", strerror(errno));
