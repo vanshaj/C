@@ -25,7 +25,7 @@ int main(int argc, char *argv[]){
     fwrite(buf, sizeof(buf[0]), numRead, outFd);
   }
   if (numRead == -1) {
-    printf("Unable to read from input due to %s", strerror(errno));
+    printf("Unable to read from input because of error %s", strerror(errno));
   }
   if (fclose(inFd) == -1){
     printf("Unable to close file %s due to %s\n", argv[1], strerror(errno));
