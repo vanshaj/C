@@ -41,15 +41,14 @@ int main(){
   printf("Headers: %s, %s, %s\n", headers[0], headers[1], headers[2]);
   fgetc(f);
 
-  /*for (int i=0; i<3; i++){*/
-  /*  int c = fscanf(f, "%[^,],%d,%s", employees[i].name, &employees[i].age, employees[i].dept);*/
-  while((int c = fscanf(f, "%[^,],%d,%s", employees[i].name, &employees[i].age, employees[i].dept)) != EOF){
+  for (int i=0; i<3; i++){
+    int c = fscanf(f, "%[^,],%d,%s", employees[i].name, &employees[i].age, employees[i].dept);
+    if (c == -1) {
+      printf("Unable to read from file due to error %s\n", strerror(errno));
+      return 1;
+    }
     fgetc(f);
   }
-  /*if (c == -1) {*/
-  /*  printf("Unable to read from file due to error %s\n", strerror(errno));*/
-  /*  return 1;*/
-  /*}*/
   for(int i=0; i<3; i++){
     printf("name: %s, age: %d, dept: %s\n", employees[i].name, employees[i].age, employees[i].dept);
   }

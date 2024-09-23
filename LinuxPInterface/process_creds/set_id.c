@@ -1,17 +1,28 @@
+#define _GNU_SOURCE
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <errno.h>
 #include <unistd.h>
 
+
 int main(){
-  int rc = setresuid(-1, -1, 0);
-  if (rc == -1) {
-    printf("Unable to set effective uid due to error '%s'\n", strerror(errno));
-    exit(EXIT_FAILURE);
-  }
-  int euid = geteuid();
-  printf("Effective uid or the process %d\n", euid);
+  /*
+    uid_t ruid, euid, suid;
+    int c;
+    if ((c = setresuid(-1, -1, 0)) == -1){
+      printf("Unable to set suid due to error '%s'\n", strerror(errno));
+      exit(EXIT_FAILURE);
+    }
+    if (getresuid(&ruid, &euid, &suid) == -1) {
+        perror("getresuid");
+        return 1;
+    }
+    printf("Effective uid or the process %d\n", euid);
+    printf("Real uid or the process %d\n", ruid);
+    printf("Saved set uid or the process %d\n", suid);
+  */
   FILE *f = fopen("/etc/shadow", "r");
   if (errno < 0 || f == NULL) {
     printf("Unable to open file due to error '%s'\n", strerror(errno));
