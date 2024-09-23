@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
+#include <errno.h>
 
 typedef struct emp {
   char name[10];
@@ -25,33 +26,38 @@ int compareNames(const void* ele1, const void* ele2) {
 
 int main(){
   emp employees[3];
-  char* filename = "test_data.csv";
-  FILE* file = fopen(filename, "r");
-  char value[256];
-  int i = 0;
-  while(fgets(value, 256, file) != NULL) {
-    if (i==0){
-      i++;
-      continue;
-    }
-    else{
-      sscanf(value, "%[^,],%d,%[^,\n]", employees[i-1].name, &employees[i-1].age, employees[i-1].dept);
-      i++;
-    }
+  char *filename = "test_data.csv";
+  FILE *f = fopen(filename, "r");
+  if (f == NULL) {
+    printf("Unable to open file due to errror %s\n", strerror(errno));
+    return 1;
   }
-  puts("Normal print");
-  for (int k=0; k<sizeof(employees)/sizeof(emp); k++){
-    puts(employees[k].name);
+  char headers[3][10];
+  int rc = fscanf(f, "%[^,],%[^,],%s", headers[0], headers[1], headers[2]);
+  if (rc == -1) {
+    printf("Unable to read from file due to error %s\n", strerror(errno));
+    return 1;
   }
-  puts("Sort by age");
-  qsort(employees, sizeof(employees)/sizeof(emp), sizeof(emp), compareAge);
-  for (int k=0; k<sizeof(employees)/sizeof(emp); k++){
-    puts(employees[k].name);
+  printf("Headers: %s, %s, %s\n", headers[0], headers[1], headers[2]);
+  fgetc(f);
+
+  /*for (int i=0; i<3; i++){*/
+  /*  int c = fscanf(f, "%[^,],%d,%s", employees[i].name, &employees[i].age, employees[i].dept);*/
+  while((int c = fscanf(f, "%[^,],%d,%s", employees[i].name, &employees[i].age, employees[i].dept)) != EOF){
+    fgetc(f);
   }
-  puts("Sort by name");
-  qsort(employees, sizeof(employees)/sizeof(emp), sizeof(emp), compareNames);
-  for (int k=0; k<sizeof(employees)/sizeof(emp); k++){
-    puts(employees[k].name);
+  /*if (c == -1) {*/
+  /*  printf("Unable to read from file due to error %s\n", strerror(errno));*/
+  /*  return 1;*/
+  /*}*/
+  for(int i=0; i<3; i++){
+    printf("name: %s, age: %d, dept: %s\n", employees[i].name, employees[i].age, employees[i].dept);
   }
-  fclose(file);
+  fclose(f);
+  puts("-------After sorting--------");
+  qsort(&employees, sizeof(employees)/sizeof(struct emp), sizeof(struct emp), compareAge);
+  for(int i=0; i<3; i++){
+    printf("name: %s, age: %d, dept: %s\n", employees[i].name, employees[i].age, employees[i].dept);
+  }
+  return 0;
 }
