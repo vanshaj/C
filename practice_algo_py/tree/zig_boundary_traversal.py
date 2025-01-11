@@ -8,6 +8,31 @@ class Node:
         self.right = right
 
 
+def in_order(node: Node):
+    if node is None:
+        return
+    print(node.val)
+    in_order(node.left)
+    in_order(node.right)
+
+
+def reverse_in_order(node: Node, s: list):
+    if node is None:
+        return
+    s.append(node.val)
+    reverse_in_order(node.left, s)
+    reverse_in_order(node.right, s)
+
+
+def boundary_traversal(node: Node):
+    print(node.val)
+    in_order(node.left)
+    right = []
+    reverse_in_order(node.right, right)
+    while (len(right) != 0):
+        print(right.pop())
+
+
 def zigzag_traversal(node: Node):
     isLR = True
     trList = [[node.val]]
@@ -48,4 +73,6 @@ if __name__ == '__main__':
     n2 = Node(2, n4, n5)
     n3 = Node(3, None, n6)
     n1 = Node(1, n2, n3)
-    zigzag_traversal(n1)
+    # zigzag_traversal(n1)
+    boundary_traversal(n1)
+
