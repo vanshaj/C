@@ -19,19 +19,19 @@ int main(int argc, char *argv[]){
   }
 
   char buf[BUFFER_SIZE];
-  FILE *inFd = fopen(argv[1], "rb");
-  FILE *outFd = fopen(argv[2], "wb");
-  while((numRead = fread(buf, sizeof(buf[0]), BUFFER_SIZE, inFd)) > 0){
-    fwrite(buf, sizeof(buf[0]), numRead, outFd);
+  FILE *inFStream = fopen(argv[1], "rb");
+  FILE *outFStream = fopen(argv[2], "wb");
+  while((numRead = fread(buf, sizeof(buf[0]), BUFFER_SIZE, inFStream)) > 0){
+    fwrite(buf, sizeof(buf[0]), numRead, outFStream);
   }
   if (numRead == -1) {
     printf("Unable to read from input because of error %s", strerror(errno));
   }
-  if (fclose(inFd) == -1){
+  if (fclose(inFStream) == -1){
     printf("Unable to close file %s due to %s\n", argv[1], strerror(errno));
     exit(EXIT_FAILURE);
   }
-  if (fclose(outFd) == -1){
+  if (fclose(outFStream) == -1){
     printf("Unable to close file %s due to %s\n", argv[2], strerror(errno));
     exit(EXIT_FAILURE);
   }
